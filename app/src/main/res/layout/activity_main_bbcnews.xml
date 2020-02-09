@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" 
+    	android:layout_weight="1"
+    	android:outAnimation="@anim/flipforward">
+                
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+	
+        <LinearLayout
+            android:id="@+id/singleNewsView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/single_news_state">
+           <!-- We do not parse html anymore -->
+            <!--
+            <TextView
+                android:id="@+id/headlineView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="9dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:id="@+id/shortDescView"
+                android:padding="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarFadeDuration="1500"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:textColor="#D6D6FF"/>
+                -->
+            <WebView
+                android:id="@+id/web_view"
+                android:padding="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarFadeDuration="1500"
+                android:scrollbarAlwaysDrawVerticalTrack="true" />
+        </LinearLayout>
+	</ViewFlipper>
+</LinearLayout>

@@ -1,0 +1,5 @@
+
+    <resources>
+        <color name="transparent">#00000000</color>
+        <color name="red_selection">#FF0000</color>
+    </resources>
